@@ -11,6 +11,7 @@ class GildedRoseTest {
 	public static final String BACKSTAGE = "Backstage passes to a TAFKAL80ETC concert";
 	public static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
 	public static final String FOO = "foo";
+	public static final String CONJURED = "Conjured Mana Cake";
 
 	// test name
     @Test
@@ -145,6 +146,18 @@ class GildedRoseTest {
  		assertEquals(0, app.getItems()[0].quality); 
  	}
     
+ // Conjured item decrement quality twice faster than normal 
+    @Test
+    void conjuredItemDecreaseQuality() {
+    	
+    	Item[] items = new Item[] {  new Item(CONJURED, 15, 20) };
+        GildedRose app = new GildedRose(items);
+		app.updateQuality();
+        assertEquals(14, app.getItems()[0].sellIn);  
+		assertEquals(18, app.getItems()[0].quality); 
+
+    }
+
     
 
 }

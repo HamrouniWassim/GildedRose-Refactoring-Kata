@@ -7,6 +7,7 @@ public enum EnumItem {
 	AGED_BRIE("Aged Brie",0,50,1,false),
 	BACKSTAGE("Backstage passes to a TAFKAL80ETC concert",0,50,1,false),
 	SULFURAS("Sulfuras, Hand of Ragnaros",80,80,0,true),
+	CONJURED("Conjured Mana Cake",0,50,-2,false),
 	AUTRE(null,0,50,-1,false);
 	
 	
